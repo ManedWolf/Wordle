@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './pages/Home/App';
+import reportWebVitals from './utils/reportWebVitals';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {CssVarsProvider} from "@mui/joy";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <CssVarsProvider>
+      <RouterProvider router={router} />
+    </CssVarsProvider>
   </React.StrictMode>
 );
 
