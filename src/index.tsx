@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './pages/Home/App';
+import Home from './pages/Home';
 import reportWebVitals from './utils/reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {CssVarsProvider} from "@mui/joy";
@@ -9,7 +9,7 @@ import {CssVarsProvider} from "@mui/joy";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
 ]);
 
